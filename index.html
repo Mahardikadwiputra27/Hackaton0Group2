@@ -1,402 +1,391 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Go Hack-Donald Delivery</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Hack-Donald Delivery</title>
 
-    <!-- font awesome cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-  <body>
-    <!-- header section starts      -->
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <header>
-      <img src="images/logo.png" class="logo" />
-      <nav class="navbar">
-        <a class="active" href="#home">home</a>
-        <a href="#menu">menu</a>
-        <a href="#review">testimonial</a>
-        <!-- <a href="#order">order</a> -->
-      </nav>
+<body>
+  <!-- header section starts      -->
 
-      <div class="icons">
-        <i class="fas fa-bars" id="menu-bars"></i>
-        <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
-        <a  href="#" class="fas fa-shopping-cart"></a>
-      </div>
-    </header>
+  <header>
+    <img src="images/logo.png" class="logo" />
+    <nav class="navbar">
+      <a class="active" href="#home">home</a>
+      <a href="#menu">menu</a>
+      <a href="#review">testimonial</a>
+      <!-- <a href="#order">order</a> -->
+    </nav>
 
-    <!-- header section ends-->
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i class="fas fa-search" id="search-icon"></i>
+      <a href="#" class="fas fa-heart"></a>
+      <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+  </header>
 
-    <!-- search form  -->
+  <!-- header section ends-->
 
-    <form action="" id="search-form">
-      <input
-        type="search"
-        placeholder="search here..."
-        name=""
-        id="search-box"
-      />
-      <label for="search-box" class="fas fa-search"></label>
-      <i class="fas fa-times" id="close"></i>
-    </form>
+  <!-- search form  -->
 
-    <!-- home section starts  -->
+  <form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box" />
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+  </form>
 
-    <section class="home" id="home">
-      <div class="swiper-container home-slider">
-        <div class="swiper-wrapper wrapper">
-          <div class="swiper-slide slide">
-            <div class="content">
-              <span>OUR SPECIAL OFFER</span>
-              <h3>TWOGETHER</h3>
-              <p>
-                Share your all-time favourite beef burger with your lovely one.
-              </p>
-              <a href="#" class="btn" id='buy2'>order now</a>
-            </div>
-            <div class="image">
-              <img src="images/banner.png" alt="" />
-            </div>
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+    <div class="swiper-container home-slider">
+      <div class="swiper-wrapper wrapper">
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>OUR SPECIAL OFFER</span>
+            <h3>TWOGETHER</h3>
+            <p>
+              Share your all-time favourite beef burger with your lovely one.
+            </p>
+            <a href="#" class="btn" id='buy2'>order now</a>
           </div>
+          <div class="image">
+            <img src="images/banner.png" alt="" />
+          </div>
+        </div>
 
-          <div class="swiper-slide slide">
-            <div class="content">
-              <span>MONEY MONEY MONEEEY!!!!!</span>
-              <h3>WE GIVE BACK CASH FOR YOU
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>MONEY MONEY MONEEEY!!!!!</span>
+            <h3>WE GIVE BACK CASH FOR YOU
             </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                natus dolor cumque?
-              </p>
-              <a href="#" class="btn">order now</a>
-            </div>
-            <div class="image">
-              <img src="images/banner.png" alt="" />
-            </div>
-          </div>
-
-          <div class="swiper-slide slide">
-            <div class="content">
-              <span>BUNDLE FOR YOUR TUMMY</span>
-              <h3>hot pizza</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                natus dolor cumque?
-              </p>
-              <a href="#" class="btn">order now</a>
-            </div>
-            <div class="image">
-              <img src="images/home-img-3.png" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="swiper-pagination"></div> -->
-      </div>
-    </section>
-
-    <!-- home section ends -->
-
-    <!-- menu section starts  -->
-
-    <section class="menu" id="menu">
-      <h3 class="sub-heading">our menu</h3>
-      <h1 class="heading">today's speciality</h1>
-
-      <div class="box-container">
-        <div class="box">
-          <div class="image">
-            <img src="images/beef-burger.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h3>BEEF BURGER</h3>
             <p>
-              High quality beef medium to well with cheese and bacon on a
-              multigrain bun.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              natus dolor cumque?
             </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 30.000</span>
+            <a href="#" class="btn">order now</a>
+          </div>
+          <div class="image">
+            <img src="images/banner.png" alt="" />
           </div>
         </div>
 
-        <div class="box">
-          <div class="image">
-            <img src="images/chicken-burger.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
+        <div class="swiper-slide slide">
           <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>CHICKEN BURGER</h3>
-            <p>Perfectly Juicy Chicken Burger.</p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 15.000</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="images/spicy-chicken.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>SPICY FRIED CHICKEN</h3>
+            <span>BUNDLE FOR YOUR TUMMY</span>
+            <h3>hot pizza</h3>
             <p>
-                A good spicy challenge strikes a balance chicken.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              natus dolor cumque?
             </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 16.000</span>
+            <a href="#" class="btn" id="hotPizza">order now</a>
           </div>
-        </div>
-
-        <div class="box">
           <div class="image">
-            <img src="images/original-chicken.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>ORIGINAL FRIED CHICKEN</h3>
-            <p>
-                Everyone loves fried chicken, Don't ever make it. Ever. Buy it from a place that makes good fried chicken.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">rP. 15.000</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="images/french-fries.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>FRENCH FRIES</h3>
-            <p>
-                Keep your friends close and your fries closer..
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 10.000</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="images/rice.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>RICE</h3>
-            <p>
-                Rice is great if you're really hungry and want to eat two thousand of something.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 6.000</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="images/cola.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>SODA</h3>
-            <p>
-                Life is better with a cold drink in your hand.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 8.000</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="images/lemon-tea.jpg" alt="" />
-            <a href="#" class="fas fa-heart"></a>
-          </div>
-          <div class="content">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>LEMON TEA</h3>
-            <p>
-             When life hands you lemons, put them in your sweet tea.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
-            <span class="price">Rp. 8.000</span>
+            <img src="images/home-img-3.png" alt="" />
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- menu section ends -->
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </section>
 
-    <!-- review section starts  -->
+  <!-- home section ends -->
 
-    <section class="review" id="review">
-      <h3 class="sub-heading">customer's review</h3>
-      <h1 class="heading">what they say</h1>
+  <!-- menu section starts  -->
 
-      <div class="swiper-container review-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide slide">
-            <i class="fas fa-quote-right"></i>
-            <div class="user">
-              <img src="images/pika.png" alt="" />
-              <div class="user-info">
-                <h3>Pikachu</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <p>
-             PIKAA PIKAAAA!!!!!
-            </p>
+  <section class="menu" id="menu">
+    <h3 class="sub-heading">our menu</h3>
+    <h1 class="heading">today's speciality</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="images/beef-burger.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-
-          <div class="swiper-slide slide">
-            <i class="fas fa-quote-right"></i>
-            <div class="user">
-              <img src="images/anton ego.jpg" alt="" />
-              <div class="user-info">
-                <h3>Anton Ego</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <p>
-                I don't *like* food; I LOVE it. If I don't love it, I don't *swallow*
-            </p>
-          </div>
-
-          
-          <div class="swiper-slide slide">
-            <i class="fas fa-quote-right"></i>
-            <div class="user">
-              <img src="images/uncle.jpg" alt="" />
-              <div class="user-info">
-                <h3>Uncle Roger</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <p>
-         Haiyaaa.. Uncle Roger like Hackdonald's rice
-            </p>
-          </div>
-
-          <div class="swiper-slide slide">
-            <i class="fas fa-quote-right"></i>
-            <div class="user">
-              <img src="images/Hacktiv8-Founders.jpg" alt="" />
-              <div class="user-info">
-                <h3>Ronald Ishak & Riza Fahmi</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <p>
-             console.log("Hello World");
-            </p>
-          </div>
+          <h3>BEEF BURGER</h3>
+          <p>
+            High quality beef medium to well with cheese and bacon on a
+            multigrain bun.
+          </p>
+          <a href="#" class="btn" id="beefburger">add to cart</a><br>
+          <span class="price">Rp. 30.000</span>
         </div>
       </div>
-    </section>
 
-    <!-- review section ends -->
+      <div class="box">
+        <div class="image">
+          <img src="images/chicken-burger.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>CHICKEN BURGER</h3>
+          <p>Perfectly Juicy Chicken Burger.</p>
+          <a href="#" class="btn" id="chickenBurger">add to cart</a><br>
+          <span class="price">Rp. 15.000</span>
+        </div>
+      </div>
 
-    <!-- order section starts  -->
+      <div class="box">
+        <div class="image">
+          <img src="images/spicy-chicken.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>SPICY FRIED CHICKEN</h3>
+          <p>
+            A good spicy challenge strikes a balance chicken.
+          </p>
+          <a href="#" class="btn" id="ayampedas">add to cart</a><br>
+          <span class="price">Rp. 16.000</span>
+        </div>
+      </div>
 
-    <!-- <section class="order" id="order">
+      <div class="box">
+        <div class="image">
+          <img src="images/original-chicken.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>ORIGINAL FRIED CHICKEN</h3>
+          <p>
+            Everyone loves fried chicken, Don't ever make it. Ever. Buy it from a place that makes good fried chicken.
+          </p>
+          <a class="btn" id="ayamgoreng" onclick="orderFoods()">add to cart</a><br>
+          <span class="price">rP. 15.000</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/french-fries.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>FRENCH FRIES</h3>
+          <p>
+            Keep your friends close and your fries closer..
+          </p>
+          <a href="#" class="btn" id="kentangGoreng">add to cart</a><br>
+          <span class="price">Rp. 10.000</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/rice.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>RICE</h3>
+          <p>
+            Rice is great if you're really hungry and want to eat two thousand of something.
+          </p>
+          <a href="#" class="btn" id="nasi">add to cart</a><br>
+          <span class="price">Rp. 6.000</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/cola.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>SODA</h3>
+          <p>
+            Life is better with a cold drink in your hand.
+          </p>
+          <a href="#" class="btn" id="cocacola">add to cart</a><br>
+          <span class="price">Rp. 8.000</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/lemon-tea.jpg" alt="" />
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>LEMON TEA</h3>
+          <p>
+            When life hands you lemons, put them in your sweet tea.
+          </p>
+          <a href="#" class="btn" id="lemonTea">add to cart</a><br>
+          <span class="price">Rp. 8.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- menu section ends -->
+
+  <!-- review section starts  -->
+
+  <section class="review" id="review">
+    <h3 class="sub-heading">customer's review</h3>
+    <h1 class="heading">what they say</h1>
+
+    <div class="swiper-container review-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/pika.png" alt="" />
+            <div class="user-info">
+              <h3>Pikachu</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            PIKAA PIKAAAA!!!!!
+          </p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/anton ego.jpg" alt="" />
+            <div class="user-info">
+              <h3>Anton Ego</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            I don't *like* food; I LOVE it. If I don't love it, I don't *swallow*
+          </p>
+        </div>
+
+
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/uncle.jpg" alt="" />
+            <div class="user-info">
+              <h3>Uncle Roger</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            Haiyaaa.. Uncle Roger like Hackdonald's rice
+          </p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/Hacktiv8-Founders.jpg" alt="" />
+            <div class="user-info">
+              <h3>Ronald Ishak & Riza Fahmi</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            console.log("Hello World");
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- review section ends -->
+
+  <!-- order section starts  -->
+
+  <!-- <section class="order" id="order">
       <h3 class="sub-heading">order now</h3>
       <h1 class="heading">free and fast</h1>
 
@@ -458,16 +447,18 @@
       </form>
     </section> -->
 
-    <!-- order section ends -->
+  <!-- order section ends -->
 
-    <!-- loader part  -->
-    <div class="loader-container">
-      <img src="images/loader.gif" alt="" />
-    </div>
+  <!-- loader part  -->
+  <div class="loader-container">
+    <img src="images/loader.gif" alt="" />
+  </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+  <script src="mainMenu.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,40 @@
+const buttonAyamgoreng = document.querySelector('#ayamgoreng');
+const buttonNasi = document.querySelector('#nasi');
+const buttonbeefBurger = document.querySelector('#beefburger');
+const buttonchickenBurger = document.querySelector('#chickenBurger');
+const buttonayamPedas = document.querySelector('#ayampedas');
+const buttonkentangGoreng = document.querySelector('#kentangGoreng');
+const buttoncocacola = document.querySelector('#cocacola');
+const buttonlemonTea = document.querySelector('#lemonTea');
+
+function orderFoods() {
+    let output = []
+    if(buttonAyamgoreng) {
+        output.push({Item: "Fried Chicken"})
+    }
+    else if(buttonNasi) {
+        output.push({Item: "Rice"})
+    }
+    else if(buttonbeefBurger) {
+        output.push({Item: "Beef Burger"})
+    }
+    else if(buttonchickenBurger) {
+        output.push({Item: "Chicken Burger"})
+    }
+    else if(buttonayamPedas) {
+        output.push({Item: "Spicy Fried Chicken"})
+    }
+    else if(buttonkentangGoreng) {
+        output.push({Item: "French Fries"})
+    }
+    else if(buttoncocacola) {
+        output.push({Item: "Cola"})
+    }
+    else if(buttonNasi) {
+        output.push({Item: "Lemon Tea"})
+    }
+    return output
+}
 let list = [
     { Item: 'Beef Burger', Price: 30_000, Type: 'Main Course' },
     { Item: 'Chicken Original', Price: 15_000, Type: 'Main Course' },
@@ -8,15 +45,7 @@ let list = [
     { Item: 'Cola', Price: 8_000, Type: 'Beverage' },
     { Item: 'Lemon Tea', Price: 8_000, Type: 'Beverage' },
 ]
-let selection = [
-    { Item: 'French Fries' },
-    { Item: 'Rice' },
-    { Item: 'Cola' },
-    { Item: 'Lemon Tea' },
-    { Item: 'Lemon Tea' },
-    { Item: 'Beef Burger' },
-    { Item: 'Beef Burger' },
-]
+let selection = orderFoods()
 
 function pesan(menu, order) {
     let output = 0
@@ -48,24 +77,15 @@ function paket(menu, order) {
         for (let j = 0; j < order.length; j++) {
             if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === true) {
                 mainCount++
-            }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === false) {
+            } else if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === false) {
                 main = true
-            }
-
-
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === true) {
+            } else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === true) {
                 sidesCount++
-            }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === false) {
+            } else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === false) {
                 sides = true
-            }
-
-
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === true) {
+            } else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === true) {
                 beverageCount++
-            }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === false) {
+            } else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === false) {
                 beverage = true
             }
 
@@ -93,7 +113,6 @@ function paket(menu, order) {
         }
     }
     return output
-
 }
 // auto paket
 function buy1(menu, order) {
@@ -115,11 +134,19 @@ function cashback(menu, order) {
 
     if (output >= 40000 && output < 85000) {
         output -= 10000
-    }
-    else if (output >= 85000) {
+    } else if (output >= 85000) {
         output -= 25000
     }
     return output
 }
-console.log(cashback(list, selection))
-// cashback 40k/ 85k
+
+buttonCheckout = document.querySelector('checkout');
+
+function checkOut() {
+    return cashback(list,selection)
+}
+
+// console.log(cashback(list, selection))
+// // cashback 40k/ 85k
+// console.log(orderfoods(list, selection))
+// console.log(button);
