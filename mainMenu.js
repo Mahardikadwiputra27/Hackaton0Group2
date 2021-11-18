@@ -10,10 +10,11 @@ let list = [
 ]
 let selection = [
     { Item: 'French Fries' },
-    { Item: 'Cola' },
-    { Item: 'Beef Burger' },
     { Item: 'Rice' },
+    { Item: 'Cola' },
     { Item: 'Lemon Tea' },
+    { Item: 'Lemon Tea' },
+    { Item: 'Beef Burger' },
     { Item: 'Beef Burger' },
 ]
 
@@ -49,10 +50,6 @@ function paket(menu, order) {
             if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === true) {
                 mainCount++
             }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === false && mainCount > 0) {
-                main = true
-                mainCount -= 1
-            }
             else if (order[j].Item === menu[i].Item && menu[i].Type === 'Main Course' && main === false) {
                 main = true
             }
@@ -61,22 +58,13 @@ function paket(menu, order) {
             else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === true) {
                 sidesCount++
             }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === false && sidesCount > 0) {
-                sides = true
-                sidesCount -= 1
-            }
             else if (order[j].Item === menu[i].Item && menu[i].Type === 'Sides' && sides === false) {
                 sides = true
             }
 
 
-
             else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === true) {
                 beverageCount++
-            }
-            else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === false && beverageCount > 0) {
-                beverage = true
-                beverageCount -= 1
             }
             else if (order[j].Item === menu[i].Item && menu[i].Type === 'Beverage' && beverage === false) {
                 beverage = true
@@ -84,15 +72,29 @@ function paket(menu, order) {
 
 
 
-            if (main && sides && beverage) {
+            if (main === true && sides === true && beverage === true) {
                 output -= 10000
                 main = false
                 sides = false
                 beverage = false
+                if (mainCount > 0) {
+                    main = true
+                    mainCount -= 1
+                }
+                if (sidesCount > 0) {
+                    sides = true
+                    sidesCount -= 1
+                }
+                if (beverageCount > 0) {
+                    beverage = true
+                    beverageCount -= 1
+                }
             }
+
         }
-        // console.log(main, sides, beverage)
-        // console.log(mainCount, sidesCount, beverageCount)
+
+        console.log(main, sides, beverage)
+        console.log(mainCount, sidesCount, beverageCount)
 
     }
 
@@ -107,7 +109,7 @@ function buy1(menu, order) {
     for (let i = 0; i < order.length; i++) {
         if (order[i].Item === 'Beef Burger') {
             beefBurgercount++
-            
+
         }
     }
     if (beefBurgercount >= 2) {
