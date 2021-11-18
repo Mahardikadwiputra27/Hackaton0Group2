@@ -33,8 +33,7 @@ function pesan(menu, order) {
 
     return output
 }
-// console.log(pesan(list, selection))
-// 43000
+// total price
 
 function paket(menu, order) {
     let main = false
@@ -93,19 +92,16 @@ function paket(menu, order) {
 
         }
     }
-
     return output
 
 }
-// console.log(paket(list, selection))
-
+// auto paket
 function buy1(menu, order) {
     let output = paket(menu, order)
     let beefBurgercount = 0
     for (let i = 0; i < order.length; i++) {
         if (order[i].Item === 'Beef Burger') {
             beefBurgercount++
-
         }
     }
     if (beefBurgercount >= 2) {
@@ -113,7 +109,7 @@ function buy1(menu, order) {
     }
     return output
 }
-// console.log(buy1(list, selection))
+// buy1 get 1 burger
 function cashback(menu, order) {
     let output = buy1(menu, order)
 
@@ -126,4 +122,4 @@ function cashback(menu, order) {
     return output
 }
 console.log(cashback(list, selection))
-
+// cashback 40k/ 85k
