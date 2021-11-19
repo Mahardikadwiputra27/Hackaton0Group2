@@ -7,6 +7,7 @@ const buttonkentangGoreng = document.querySelector('#kentangGoreng');
 const buttoncocacola = document.querySelector('#cocacola');
 const buttonlemonTea = document.querySelector('#lemonTea');
 
+
 function orderFoods() {
     let output = []
     if(buttonAyamgoreng) {
@@ -145,6 +146,7 @@ buttonCheckout = document.querySelector('checkout');
 function checkOut() {
     return cashback(list,selection)
 }
+
 
 // console.log(cashback(list, selection))
 // // cashback 40k/ 85k
