@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go Hack-Donald Delivery</title>
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+      integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- font awesome cdn link  -->
     <link
@@ -36,30 +57,21 @@
 
       <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
-        <!-- <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
-        <a  href="#" class="fas fa-shopping-cart" id="sCart">
-            <span class="badge"></span>
 
-        </a> -->
-        <button class="btn">cart</button>
+        <!---need to hide () or make it (0)-->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#cart"
+          onclick="myFunction()"
+        >
+          Cart (<span class="total-count"></span>)</button
+        ><button class="clear-cart btn btn-danger">Clear Cart</button>
       </div>
     </header>
 
     <!-- header section ends-->
-
-    <!-- search form  -->
-
-    <form action="" id="search-form">
-      <input
-        type="search"
-        placeholder="search here..."
-        name=""
-        id="search-box"
-      />
-      <label for="search-box" class="fas fa-search"></label>
-      <i class="fas fa-times" id="close"></i>
-    </form>
 
     <!-- home section starts  -->
 
@@ -73,7 +85,7 @@
               <p>
                 Share your all-time favourite beef burger with your lovely one.
               </p>
-              <a href="#" class="btn" id='buy2'>order now</a>
+              <a href="#" class="btn" id="buy2">order now</a>
             </div>
             <div class="image">
               <img src="images/banner.png" alt="" />
@@ -83,11 +95,8 @@
           <div class="swiper-slide slide">
             <div class="content">
               <span>MONEY MONEY MONEEEY!!!!!</span>
-              <h3>WE GIVE BACK CASH FOR YOU
-            </h3>
-              <p>
-                Enjoy your meal, Take back your money
-              </p>
+              <h3>WE GIVE BACK CASH FOR YOU</h3>
+              <p>Enjoy your meal, Take back your money</p>
               <!-- <a href="#" class="btn">order now</a> -->
             </div>
             <div class="image">
@@ -109,8 +118,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="swiper-pagination"></div> -->
       </div>
     </section>
 
@@ -126,7 +133,6 @@
         <div class="box">
           <div class="image">
             <img src="images/beef-burger.jpg" alt="" />
-            
           </div>
           <div class="content">
             <div class="stars">
@@ -141,7 +147,13 @@
               High quality beef medium to well with cheese and bacon on a
               multigrain bun.
             </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <button
+              data-name="BEEF BURGER"
+              data-price="30000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 30.000</span>
           </div>
         </div>
@@ -149,7 +161,6 @@
         <div class="box">
           <div class="image">
             <img src="images/chicken-burger.jpg" alt="" />
-           
           </div>
           <div class="content">
             <div class="stars">
@@ -161,7 +172,13 @@
             </div>
             <h3>CHICKEN BURGER</h3>
             <p>Perfectly Juicy Chicken Burger.</p>
-            <a href="#" class="btn">add to cart</a><br>
+            <button
+              data-name="CHICKEN BURGER"
+              data-price="15000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 15.000</span>
           </div>
         </div>
@@ -169,7 +186,6 @@
         <div class="box">
           <div class="image">
             <img src="images/spicy-chicken.jpg" alt="" />
-          
           </div>
           <div class="content">
             <div class="stars">
@@ -177,13 +193,17 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+              <i class="fas fa-star"></i>
             </div>
             <h3>SPICY FRIED CHICKEN</h3>
-            <p>
-                A good spicy challenge strikes a balance chicken.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <p>A good spicy challenge strikes a balance chicken.</p>
+            <button
+              data-name="SPICY FRIED CHICKEN"
+              data-price="16000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 16.000</span>
           </div>
         </div>
@@ -191,7 +211,6 @@
         <div class="box">
           <div class="image">
             <img src="images/original-chicken.jpg" alt="" />
-            
           </div>
           <div class="content">
             <div class="stars">
@@ -203,9 +222,16 @@
             </div>
             <h3>ORIGINAL FRIED CHICKEN</h3>
             <p>
-                Everyone loves fried chicken, Don't ever make it. Ever. Buy it from a place that makes good fried chicken.
+              Everyone loves fried chicken, Don't ever make it. Ever. Buy it
+              from a place that makes good fried chicken.
             </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <button
+              data-name="ORIGINAL FRIED CHICKEN"
+              data-price="15000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 15.000</span>
           </div>
         </div>
@@ -213,7 +239,6 @@
         <div class="box">
           <div class="image">
             <img src="images/french-fries.jpg" alt="" />
-            
           </div>
           <div class="content">
             <div class="stars">
@@ -224,10 +249,14 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
             <h3>FRENCH FRIES</h3>
-            <p>
-                Keep your friends close and your fries closer..
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <p>Keep your friends close and your fries closer..</p>
+            <button
+              data-name="FRENCH FRIES"
+              data-price="10000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 10.000</span>
           </div>
         </div>
@@ -235,7 +264,6 @@
         <div class="box">
           <div class="image">
             <img src="images/rice.jpg" alt="" />
-           
           </div>
           <div class="content">
             <div class="stars">
@@ -247,9 +275,16 @@
             </div>
             <h3>RICE</h3>
             <p>
-                Rice is great if you're really hungry and want to eat two thousand of something.
+              Rice is great if you're really hungry and want to eat two thousand
+              of something.
             </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <button
+              data-name="RICE"
+              data-price="6000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 6.000</span>
           </div>
         </div>
@@ -257,7 +292,6 @@
         <div class="box">
           <div class="image">
             <img src="images/cola.jpg" alt="" />
-           
           </div>
           <div class="content">
             <div class="stars">
@@ -268,10 +302,14 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
             <h3>SODA</h3>
-            <p>
-                Life is better with a cold drink in your hand.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <p>Life is better with a cold drink in your hand.</p>
+            <button
+              data-name="SODA"
+              data-price="8000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 8.000</span>
           </div>
         </div>
@@ -279,7 +317,6 @@
         <div class="box">
           <div class="image">
             <img src="images/lemon-tea.jpg" alt="" />
-           
           </div>
           <div class="content">
             <div class="stars">
@@ -290,10 +327,14 @@
               <i class="fas fa-star-half-alt"></i>
             </div>
             <h3>LEMON TEA</h3>
-            <p>
-             When life hands you lemons, put them in your sweet tea.
-            </p>
-            <a href="#" class="btn">add to cart</a><br>
+            <p>When life hands you lemons, put them in your sweet tea.</p>
+            <button
+              data-name="LEMON TEA"
+              data-price="8000"
+              class="add-to-cart btn btn-primary"
+            >
+              add to cart</button
+            ><br />
             <span class="price">Rp. 8.000</span>
           </div>
         </div>
@@ -325,9 +366,7 @@
                 </div>
               </div>
             </div>
-            <p>
-             PIKAA PIKAAAA!!!!!
-            </p>
+            <p>PIKAA PIKAAAA!!!!!</p>
           </div>
 
           <div class="swiper-slide slide">
@@ -346,11 +385,11 @@
               </div>
             </div>
             <p>
-                I don't *like* food; I LOVE it. If I don't love it, I don't *swallow*
+              I don't *like* food; I LOVE it. If I don't love it, I don't
+              *swallow*
             </p>
           </div>
 
-          
           <div class="swiper-slide slide">
             <i class="fas fa-quote-right"></i>
             <div class="user">
@@ -366,9 +405,7 @@
                 </div>
               </div>
             </div>
-            <p>
-         Haiyaaa.. Uncle Roger like Hackdonald's rice
-            </p>
+            <p>Haiyaaa.. Uncle Roger like Hackdonald's rice very much!</p>
           </div>
 
           <div class="swiper-slide slide">
@@ -386,9 +423,7 @@
                 </div>
               </div>
             </div>
-            <p>
-             console.log("Hello World");
-            </p>
+            <p>console.log("Hello World");</p>
           </div>
         </div>
       </div>
@@ -396,71 +431,45 @@
 
     <!-- review section ends -->
 
-    <!-- order section starts  -->
-
-    <!-- <section class="order" id="order">
-      <h3 class="sub-heading">order now</h3>
-      <h1 class="heading">free and fast</h1>
-
-      <form action="">
-        <div class="inputBox">
-          <div class="input">
-            <span>your name</span>
-            <input type="text" placeholder="enter your name" />
+    <!------------------MODAL------------------>
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="input">
-            <span>your number</span>
-            <input type="number" placeholder="enter your number" />
+          <div class="modal-body">
+            <table class="show-cart table"></table>
+            <div>Total price: $<span class="total-cart"></span></div>
           </div>
-        </div>
-        <div class="inputBox">
-          <div class="input">
-            <span>your order</span>
-            <input type="text" placeholder="enter food name" />
-          </div>
-          <div class="input">
-            <span>additional food</span>
-            <input type="test" placeholder="extra with food" />
-          </div>
-        </div>
-        <div class="inputBox">
-          <div class="input">
-            <span>how musch</span>
-            <input type="number" placeholder="how many orders" />
-          </div>
-          <div class="input">
-            <span>date and time</span>
-            <input type="datetime-local" />
-          </div>
-        </div>
-        <div class="inputBox">
-          <div class="input">
-            <span>your address</span>
-            <textarea
-              name=""
-              placeholder="enter your address"
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-          <div class="input">
-            <span>your message</span>
-            <textarea
-              name=""
-              placeholder="enter your message"
-              id=""
-              cols="30"
-              rows="10"
-            ></textarea>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Order now</button>
           </div>
         </div>
-
-        <input type="submit" value="order now" class="btn" />
-      </form>
-    </section> -->
-
-    <!-- order section ends -->
+      </div>
+    </div>
 
     <!-- loader part  -->
     <div class="loader-container">
@@ -472,7 +481,6 @@
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
     <script src="function.js"></script>
-
-    
+    <script src="new.js"></script>
   </body>
 </html>
