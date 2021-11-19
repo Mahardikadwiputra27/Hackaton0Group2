@@ -34,6 +34,11 @@ section:nth-child(even) {
   background: #eee;
 }
 
+.navbar {
+  display: block !important;
+
+}
+
 .sub-heading {
   text-align: center;
   color: #dd1021;
@@ -123,21 +128,30 @@ header .icons a {
   background: #eee;
 }
 
-header .icon .btn {
+/* header .icon .btn {
   border-color: #ffc300;
   font-size: 1.7rem;
   font-weight: bolder;
+} */
+
+header .icons .btn-primary {
+  background-color: #fff;
+  color: #ffc300;
+  font-weight: bolder;
+  border-color:  #fff;
 }
 
+header .icons .btn-primary:hover {
+  color: #fff;
+  background-color: #ffc300;
+  font-weight: bolder;
+  border-color: #ffc300;
+}
 
-header .icons a badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background: red;
-  color: white;
+header .icons .btn-danger:hover {
+  color: #fff;
+  background-color: #AB0C19;
+  font-weight: bolder;
 }
 
 header .icons i:hover,
