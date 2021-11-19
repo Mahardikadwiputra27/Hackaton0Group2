@@ -123,6 +123,23 @@ header .icons a {
   background: #eee;
 }
 
+header .icon .btn {
+  border-color: #ffc300;
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+
+header .icons a badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
 header .icons i:hover,
 header .icons a:hover {
   color: #fff;
